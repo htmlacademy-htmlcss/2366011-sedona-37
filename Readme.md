@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
-* Студент: [Владислав Полонский](https://up.htmlacademy.ru/htmlcss/37/user/2366011).
-* Наставник: `Неизвестно`.
+- Студент: [Владислав Полонский](https://up.htmlacademy.ru/htmlcss/37/user/2366011).
+- Наставник: [Дмитрий Осадченко](https://htmlacademy.ru/profile/dimaos).
 
 ---
 
