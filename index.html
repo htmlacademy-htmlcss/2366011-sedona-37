@@ -9,7 +9,7 @@
       <nav class="navigation">
         <a href="index.html"><img src="#" alt="Логотип компании" /></a>
         <ul class="navigation-list">
-          <li class="navigation-item">
+          <li class="navigation-item navigation-item-current">
             <a class="navigation-link" href="index.html">Главная</a>
           </li>
           <li class="navigation-item">
@@ -19,32 +19,34 @@
             <a class="navigation-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
-        <ul class="navigation-list navigation-user">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
+        <ul class="navigation-user-list">
+          <li class="navigation-user-item">
+            <a class="navigation-user-link" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
+          <li class="navigation-user-item">
+            <a class="navigation-user-link" href="#">
               <span class="'visually-hidden">Избраное</span>
             </a>
           </li>
         </ul>
-        <a class="button button-want-here" href="#">Хочу сюда!</a>
+        <button class="button button-want-here">Хочу сюда!</button>
       </nav>
     </header>
     <main class="main-index">
       <section class="hero">
-        <h1 class="visually-hidden">Седона</h1>
-        <img class="welcome" src="#" alt="Добро пожаловать в Седону" />
+        <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
+        <img
+          class="welcome-image"
+          src="#"
+          alt="Изображение гор, на фоне которых надписб: Добро пожаловать в Седону, потому что Гранд-Каньон отстой"
+        />
+        <img class="decoration-welcome" scr="#" />
       </section>
       <section class="advantages">
-        <header class="description">
-          <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
-          <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
-        </header>
-        <h2 class="visually-hidden">Преимущества</h2>
+        <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+        <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
         <ul class="advantages-list">
           <li class="advantages-item">
             <div class="advantages-item-container">
@@ -77,7 +79,6 @@
       <section class="services">
         <h2>Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
         <p>Опытный персонал и качественное обслуживание!</p>
-        <h2 class="visually-hidden">Услуги</h2>
         <ul class="services-list">
           <li class="services-item">
             <img scr="#" atl="Иконка дома" />
@@ -104,47 +105,58 @@
           Укажите предполагаемые даты поездки, и мы покажем вам лучшие
           предложения гостиниц в Седоне
         </p>
-        <a class="button search-hotel-button" href="catalog.html"
+        <a class="button button-search-hotel" href="catalog.html"
           >ПОИСК ГОСТИНИЦЫ В седоне</a
         >
       </section>
-      <footer class="subscribe index-subscribe">
+      <section class="subscription index-subscription">
         <h2>Подпишитесь на рассылку</h2>
         <p>
           Только полезная информация и никакого спама, честное бойскаутское!
         </p>
-        <form action="https://echo.htmlacademy.ru/" post="post">
+        <form
+          class="subscription-form"
+          action="https://echo.htmlacademy.ru/"
+          method="post"
+        >
+          <label class="visually-hidden" for="mail-field">E-mail адрес</label>
           <input
             type="email"
             name="mail"
             id="mail-field"
             placeholder="Ваш e-mail"
           />
-          <input type="submit" value="Подписаться" />
+          <button class="button button-subscription" type="submit">
+            Подписаться
+          </button>
         </form>
-      </footer>
+      </section>
     </main>
     <footer class="main-footer">
       <h2 class="visually-hidden">Контакты</h2>
       <ul class="social-list">
         <li class="social-item">
-          <a href="https://vk.com/htmlacademy">
+          <a href="https://vk.com/htmlacademy" target="_blank">
             <span class="visually-hidden">ВКонтакте</span>
           </a>
         </li>
         <li class="social-item">
-          <a href="https://t.me/htmlacademy">
+          <a href="https://t.me/htmlacademy" target="_blank">
             <span class="visually-hidden">Телеграм</span>
           </a>
         </li>
         <li class="social-item">
-          <a href="https://www.youtube.com/user/htmlacademyru">
+          <a href="https://www.youtube.com/user/htmlacademyru" target="_blank">
             <span class="visually-hidden">Youtube</span>
           </a>
         </li>
       </ul>
       <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-      <a class="footer-logo-academy" href="https://htmlacademy.ru/">
+      <a
+        class="footer-logo-academy"
+        href="https://htmlacademy.ru/"
+        target="_blank"
+      >
         <img src="#" atl="Логотип HTML Academy" />
       </a>
     </footer>
