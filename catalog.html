@@ -85,6 +85,69 @@
               </li>
             </ul>
           </fieldset>
+          <fieldset class="search-filter-group">
+            <legend class="search-filter-title">Тип жилья:</legend>
+            <ul class="search-filter-list">
+              <li class="search-filter-item">
+                <input
+                  class="control-input"
+                  type="radio"
+                  name="type-of-housing"
+                  value="hotel"
+                  id="hotel-field"
+                  checked
+                />
+                <label for="hotel-field">Гостиница</label>
+              </li>
+              <li class="search-filter-item">
+                <input
+                  class="control-input"
+                  type="radio"
+                  name="type-of-housing"
+                  value="motel"
+                  id="motel-field"
+                />
+                <label for="motel-field">Мотель</label>
+              </li>
+              <li class="search-filter-item">
+                <input
+                  class="control-input"
+                  type="radio"
+                  name="type-of-housing"
+                  value="apartment"
+                  id="apartment-field"
+                />
+                <label for="apartment-field">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="search-filter-group">
+            <legend class="search-filter-title">Стоимость, ₽:</legend>
+            <input
+              class="control-input"
+              type="text"
+              name="min-amount"
+              value="0"
+              id="min-amount-field"
+            />
+            <label class="visually-hidden" for="min-amount-field"
+              >Минимальная стоимость</label
+            >
+            <input
+              class="control-input"
+              type="text"
+              name="max-amount"
+              value="9000"
+              id="max-amount-field"
+            />
+            <label class="visually-hidden" for="max-amount-field"
+              >Максимальная стоимость</label
+            >
+          </fieldset>
+          <button class="button button-search-filter" type="submit">
+            Применить
+          </button>
+          <button class="button button-reset" type="reset">Сбросить</button>
         </form>
       </section>
     </main>
