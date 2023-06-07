@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Поиск гостиницы в Седоне</title>
   </head>
+
   <body>
     <header class="main-header">
       <nav class="navigation">
@@ -47,41 +49,20 @@
         </ul>
         <div class="search-options-container">
           <h2 class="visually-hidden">Параметры поиска гостиницы</h2>
-          <form
-            class="search-options"
-            action="https://echo.htmlacademy.ru/"
-            method="post"
-          >
+          <form class="search-options" action="https://echo.htmlacademy.ru/" method="post">
             <fieldset class="search-filter-group">
               <legend class="search-filter-title">Инфраструктура:</legend>
               <ul class="search-filter-list">
                 <li class="search-filter-item">
-                  <input
-                    class="control-input"
-                    type="checkbox"
-                    name="swimming-poll"
-                    id="swimming-poll-field"
-                    checked
-                  >
+                  <input class="control-input" type="checkbox" name="swimming-poll" id="swimming-poll-field" checked>
                   <label class="control" for="swimming-poll-field">Бассейн</label>
                 </li>
                 <li class="search-filter-item">
-                  <input
-                    class="control-input"
-                    type="checkbox"
-                    name="parking"
-                    id="parking-field"
-                    checked
-                  >
+                  <input class="control-input" type="checkbox" name="parking" id="parking-field" checked>
                   <label class="control" for="parking-field">Парковка</label>
                 </li>
                 <li class="search-filter-item">
-                  <input
-                    class="control-input"
-                    type="checkbox"
-                    name="wi-fi"
-                    id="wi-fi-field"
-                  >
+                  <input class="control-input" type="checkbox" name="wi-fi" id="wi-fi-field">
                   <label class="control" for="wi-fi-field">Wi-Fi</label>
                 </li>
               </ul>
@@ -90,55 +71,26 @@
               <legend class="search-filter-title">Тип жилья:</legend>
               <ul class="search-filter-list">
                 <li class="search-filter-item">
-                  <input
-                    class="control-input"
-                    type="radio"
-                    name="type-of-housing"
-                    value="hotel"
-                    id="hotel-field"
-                    checked
-                  >
+                  <input class="control-input" type="radio" name="type-of-housing" value="hotel" id="hotel-field"
+                    checked>
                   <label for="hotel-field">Гостиница</label>
                 </li>
                 <li class="search-filter-item">
-                  <input
-                    class="control-input"
-                    type="radio"
-                    name="type-of-housing"
-                    value="motel"
-                    id="motel-field"
-                  >
+                  <input class="control-input" type="radio" name="type-of-housing" value="motel" id="motel-field">
                   <label for="motel-field">Мотель</label>
                 </li>
                 <li class="search-filter-item">
-                  <input
-                    class="control-input"
-                    type="radio"
-                    name="type-of-housing"
-                    value="apartment"
-                    id="apartment-field"
-                  >
+                  <input class="control-input" type="radio" name="type-of-housing" value="apartment"
+                    id="apartment-field">
                   <label for="apartment-field">Апартаменты</label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="search-filter-group">
               <legend class="search-filter-title">Стоимость, ₽:</legend>
-              <input
-                class="control-input"
-                type="text"
-                name="min-amount"
-                value="0"
-                id="min-amount-field"
-              >
+              <input class="control-input" type="text" name="min-amount" value="0" id="min-amount-field">
               <label class="visually-hidden" for="min-amount-field">Минимальная стоимость</label>
-              <input
-                class="control-input"
-                type="text"
-                name="max-amount"
-                value="9000"
-                id="max-amount-field"
-              >
+              <input class="control-input" type="text" name="max-amount" value="9000" id="max-amount-field">
               <label class="visually-hidden" for="max-amount-field">Максимальная стоимость</label>
             </fieldset>
             <button class="button button-search-filter" type="submit">Применить</button>
@@ -270,18 +222,9 @@
       <section class="subscription catalog-subscription">
         <h2 class="section-title">Подпишитесь на рассылку</h2>
         <p class="section-subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form
-          class="subscription-form"
-          action="https://echo.htmlacademy.ru/"
-          method="post"
-        >
+        <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="mail-field">E-mail адрес</label>
-          <input
-            type="email"
-            name="mail"
-            id="mail-field"
-            placeholder="Ваш e-mail"
-          >
+          <input type="email" name="mail" id="mail-field" placeholder="Ваш e-mail">
           <button class="button button-subscription" type="submit">Подписаться</button>
         </form>
       </section>
@@ -311,4 +254,5 @@
       </a>
     </footer>
   </body>
+
 </html>
