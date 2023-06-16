@@ -13,7 +13,9 @@
     src: url(../fonts/ptsans-700.woff2) format("woff2");
     font-display: swap;
 }
-
+html {
+    height: 100%;
+}
 body {
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
@@ -21,11 +23,19 @@ body {
     color: #333333;
     margin: 0;
     background-color: #F2F2F2;
+    height: 100%;
 }
 .page-container {
     width: 1200px;
     background-color: #FFFFFF;
     margin: 0 auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+main {
+flex-grow: 1;
 }
 
 *,
@@ -33,6 +43,20 @@ body {
 *::after {
   box-sizing: border-box;
 }
+
+/* .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  } */
+
 /* Стилизация шапки */
 .main-header {
     color: #000000;
@@ -58,6 +82,7 @@ body {
 .logo {
     margin-left: 70px;
     margin-right: 28px;
+    display: block;
 }
 
 .navigation-link {
@@ -244,6 +269,14 @@ body {
 }
 
 /* Подвал страницы */
+.main-footer {
+    display: flex;
+}
+
+.social-list {
+    display: flex;
+    list-style: none;
+}
 .footer-phone {
     font-size: 40px;
     line-height: 40px;
@@ -258,7 +291,8 @@ body {
     background-image: url("../images/background-filter.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: lightblue;
+    background-color: rgb(4, 59, 79);
+    min-height: 412px;
 }
 
 .filter-title {
@@ -267,12 +301,24 @@ body {
     line-height: 78px;
     color: #FFFFFF;
 }
-
+.breadcrumbs {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 .breadcrumbs-link {
     font-weight: 400;
     font-size: 16px;
     line-height: 21px;
     color: #FFFFFF;
+    text-decoration: none;
+}
+.search-options {
+    display: flex;
+}
+.search-filter-group {
+    border: none;
 }
 
 .search-filter-title {
@@ -287,10 +333,17 @@ body {
     font-size: 18px;
     line-height: 23px;
     color: #FFFFFF;
+    list-style: none;
 }
 
 .button-search-filter {
     background-color: #82B3D3;
+}
+
+.sorting-products {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .sorting-title {
@@ -307,6 +360,21 @@ body {
     font-size: 18px;
     line-height: 21px;
     color: #333333;
+}
+
+.hotel-cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+}
+
+.hotel-card {
+    width: 340px;
+    height: 438px;
+    padding: 20px;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
 }
 
 .hotel-card-title {
@@ -335,15 +403,45 @@ body {
     text-align: center;
     text-transform: uppercase;
     background: #F2F2F2;
+    width: 140px;
+    height: 37px;
+    padding: 9px 22px 8px 23px;
+}
+
+.pagination{
+    display: flex;
+    align-items: center;
+}
+
+.pagination-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 8px;
 }
 
 .pagination-link {
+    display: inline-block;
     font-weight: 700;
     font-size: 20px;
     line-height: 36px;
     color: #FFFFFF;
     background-color: #82B3D3;
     text-decoration: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 12px 18px;
+}
+
+.pagination-separator {
+    margin: 0;
+    padding: 17px 29px;
+    font-size: 22px;
+    line-height: 26px;
+    color: #000000;
 }
 
 .pagination-current {
