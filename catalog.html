@@ -25,12 +25,12 @@
           </ul>
           <ul class="navigation-user-list">
             <li class="navigation-user-item">
-              <a class="navigation-link navigation-user-link" href="#">
+              <a class="navigation-user-link navigation-user-link-search" href="#">
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
             <li class="navigation-user-item">
-              <a class="navigation-link navigation-user-link" href="#">
+              <a class="navigation-user-link navigation-user-link-favorites" href="#">
                 <span class="visually-hidden">Избраное</span>
               </a>
             </li>
@@ -43,7 +43,7 @@
           <h1 class="filter-title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs">
             <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link" href="index.html"><span class="visually-hidden">Главная</span></a>
+              <a class="breadcrumbs-link breadcrumbs-link-main" href="index.html"><span class="visually-hidden">Главная</span></a>
             </li>
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link">Гостиницы</a>
@@ -52,6 +52,7 @@
           <div class="search-options-container">
             <h2 class="visually-hidden">Параметры поиска гостиницы</h2>
             <form class="search-options" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="checkbox-radio-wrapper">
               <fieldset class="search-filter-group">
                 <legend class="search-filter-title">Инфраструктура:</legend>
                 <ul class="search-filter-list">
@@ -70,7 +71,7 @@
                 </ul>
               </fieldset>
               <fieldset class="search-filter-group">
-                <legend class="search-filter-title">Тип жилья:</legend>
+                <legend class="search-filter-title">Тип Жилья:</legend>
                 <ul class="search-filter-list">
                   <li class="search-filter-item">
                     <input class="control-input" type="radio" name="type-of-housing" value="hotel" id="hotel-field"
@@ -88,21 +89,24 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="search-filter-group">
+            </div>
+              <fieldset class="search-filter-group search-filter-group-price">
                 <legend class="search-filter-title">Стоимость, ₽:</legend>
                 <input class="control-input" type="text" name="min-amount" value="0" id="min-amount-field">
                 <label class="visually-hidden" for="min-amount-field">Минимальная стоимость</label>
                 <input class="control-input" type="text" name="max-amount" value="9000" id="max-amount-field">
                 <label class="visually-hidden" for="max-amount-field">Максимальная стоимость</label>
               </fieldset>
+            <div class="seearch-button-wrapper">
               <button class="button button-search-filter" type="submit">Применить</button>
               <button class="button button-reset" type="reset">Сбросить</button>
+            </div>
             </form>
           </div>
         </section>
         <section class="hotel-cards">
           <div class="sorting-products">
-            <h2 class="sorting-title">Найдено гостиниц:<output>38</output></h2>
+            <h2 class="sorting-title">Найдено гостиниц: <output>38</output></h2>
             <label class="visually-hidden" for="sorting-field">Сортировка</label>
             <select class="sorting-select" id="sorting-field">
               <option value="chep" selected>Сначала дешевые</option>
@@ -110,18 +114,18 @@
               <option value="popular">Сначала популярные</option>
             </select>
             <ul class="sorting-display-list">
-              <li class="sorting-display-item sorting-display-item-current">
-                <a href="#">
+              <li class="sorting-display-item">
+                <a href="#" class="sorting-display-link sorting-display-link-current sorting-display-link-cards">
                   <span class="visually-hidden">Показать карточки</span>
                 </a>
               </li>
               <li class="sorting-display-item">
-                <a href="#">
+                <a href="#" class="sorting-display-link sorting-display-link-slider">
                   <span class="visually-hidden">Показать слайдер</span>
                 </a>
               </li>
               <li class="sorting-display-item">
-                <a href="#">
+                <a href="#" class="sorting-display-link sorting-display-link-list">
                   <span class="visually-hidden">Показать список</span>
                 </a>
               </li>
@@ -231,7 +235,7 @@
         </section>
         <section class="subscription catalog-subscription">
           <h2 class="section-title">Подпишитесь на рассылку</h2>
-          <p class="section-subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <p class="section-subtitle">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="mail-field">E-mail адрес</label>
             <input class="subscription-mail" type="email" name="mail" id="mail-field" placeholder="Ваш e-mail">
@@ -243,17 +247,17 @@
         <h2 class="visually-hidden">Контакты</h2>
         <ul class="social-list">
           <li class="social-item">
-            <a href="https://vk.com/htmlacademy" target="_blank">
+            <a class="social-link social-link-vk" href="https://vk.com/htmlacademy" target="_blank">
               <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
           <li class="social-item">
-            <a href="https://t.me/htmlacademy" target="_blank">
+            <a class="social-link social-link-tg" href="https://t.me/htmlacademy" target="_blank">
               <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
           <li class="social-item">
-            <a href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+            <a class="social-link social-link-youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
               <span class="visually-hidden">Youtube</span>
             </a>
           </li>
