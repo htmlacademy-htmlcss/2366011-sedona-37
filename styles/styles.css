@@ -589,6 +589,14 @@ main {
     text-decoration: none;
 }
 
+.breadcrumbs-link[href]:hover {
+    opacity: 0.6;
+}
+
+.breadcrumbs-link[href]:active {
+    opacity: 0.3;
+}
+
 .breadcrumbs-link-main {
     display: inline-block;
     width: 13px;
@@ -614,7 +622,6 @@ main {
 
 .search-options {
     display: flex;
-    align-items: flex-end;
 }
 
 .checkbox-radio-wrapper {
@@ -627,6 +634,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 32px;
+    align-self: flex-end;
 }
 
 .search-filter-group {
@@ -635,10 +643,55 @@ main {
     padding: 0;
 }
 
+.search-filter-item {
+    position: relative;
+}
+
+.control {
+    padding-left: 36px;
+    display: block;
+    cursor: pointer;
+}
+
+
+.control::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    top: 0;
+    left: 0;
+}
+
+.control-input[type="checkbox"]:checked + .control::before {
+    background-image: url("../images/icon-checkbox.svg");
+}
+
+.control-radio::before {
+    border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control::before {
+    width: 20px;
+    height: 20px;
+    border: 5px solid #FFFFFF;
+    border-radius: 50%;
+    background-color: #3F5E72;
+}
+
 .search-filter-group-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.range-wrapper-inputs {
     margin-right: 70px;
     display: flex;
     gap: 2px;
+    margin-bottom: 36px;
 }
 
 .control-input-price {
@@ -660,12 +713,47 @@ main {
     border-radius: 0px 4px 4px 0px;
 }
 
+.range-scale {
+    position: relative;
+    width: 287px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+.range-bar {
+    position: absolute;
+    height: 4px;
+    background-color: #FFFFFF;
+    width: 226px;
+}
+
+.range-toggle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.range-toggle-min {
+    top: -8px;
+}
+
+.range-toggle-max {
+    top: -8px;
+    right: -10px;
+}
+
 .search-filter-title {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
     color: #FFFFFF;
     margin: 0;
+    padding: 0;
     margin-bottom: 32px;
 }
 
