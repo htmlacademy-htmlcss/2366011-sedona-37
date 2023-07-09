@@ -682,6 +682,14 @@ main {
     background-color: #3F5E72;
 }
 
+.control:hover {
+    opacity: 0.6;
+}
+
+.control:active {
+    opacity: 0.3;
+}
+
 .search-filter-group-price {
     display: flex;
     flex-direction: column;
@@ -692,6 +700,7 @@ main {
     display: flex;
     gap: 2px;
     margin-bottom: 36px;
+    position: relative;
 }
 
 .control-input-price {
@@ -703,6 +712,24 @@ main {
     height: 48px;
     border: none;
     padding: 12px 20px;
+    padding-right: 50px;
+}
+
+.amount {
+    line-height: 24px;
+    color: #000000;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.3;
+}
+
+.amount-from {
+    left: 106px;
+}
+
+.amount-until {
+    right: 20px;
 }
 
 .control-input-price:nth-of-type(1) {
@@ -736,6 +763,16 @@ main {
     border-radius: 5px;
     border: none;
     cursor: pointer;
+}
+
+.range-toggle:hover,
+.range-toggle:focus {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:active {
+    border: 2px solid #83B3D3;
+    box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
 }
 
 .range-toggle-min {
@@ -1107,4 +1144,171 @@ main {
     background-color: #F2F2F2;
     color: #000000;
     border: none;
+}
+
+/* Модальное окно */
+.modal-container {
+    position: fixed;
+    background-color: rgba(242, 242, 242, 0.8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.modal-search {
+    position: relative;
+    margin: auto;
+    width: 717px;
+    background-color: #FFFFFF;
+    padding: 64px 70px;
+    border-radius: 30px;
+    box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.15);
+    display: grid;
+    grid-template-columns: 130px auto auto 130px;
+
+}
+
+.modal-title {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-transform: uppercase;
+    grid-column: 1 / 4;
+    margin-bottom: 64px;
+}
+
+.button-modal-close {
+    display: block;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+    background-color: #F2F2F2;
+    background-image: url("../images/button-close.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    align-self: start;
+    justify-self: end;
+    margin-right: -18px;
+    position: relative;
+}
+
+.arrival-date-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    grid-column: 1 / -1;
+}
+
+.control-modal {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: capitalize;
+}
+
+.arrival-date-wrapper .control-modal {
+    width: 137px;
+}
+
+.control-input-modal {
+    width: 440px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    background-color: #F2F2F2;
+    border: none;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.description-date {
+    padding-left: 157px;
+    padding-top: 4px;
+    margin-bottom: 23px;
+}
+
+.control-input-modal-amount {
+    width: 31px;
+    appearance: none;
+    margin: 0;
+    padding: 14px 3px;
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 0;
+}
+.control-input-modal-amount::-webkit-outer-spin-button,
+.control-input-modal-amount::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.amount-wrapper {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+.amount-people-wrapper {
+    display: flex;
+    margin-right: auto;
+}
+
+.amount-people-wrapper:last-child {
+    margin-right: 0;
+}
+
+.amount-wrapper .control-modal {
+    margin-right: 46px;
+}
+
+.amount-people {
+    display: block;
+    width: 40px;
+    height: 48px;
+    padding: 14px 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.amount-people-minus {
+    position: relative;
+    border-radius: 4px 0 0 4px;
+}
+
+.amount-people-plus {
+    position: relative;
+    border-radius: 0 4px 4px 0;
+}
+
+
+.icon-amount-people {
+    fill: #756157;
+    fill-opacity: 0.3;
+}
+
+.button-modal-search {
+    grid-column: 1 / -1;
+    display: block;
+    padding: 18px 77px;
+    font-family: inherit;
+    border: none;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    background-color: #83B3D3;
 }

@@ -170,6 +170,53 @@
           </svg>
         </a>
       </footer>
+      <div class="modal-container">
+        <form class="modal-search" action="https://echo.htmlacademy.ru/" method="post">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <button class="button-modal-close"><span class="visually-hidden">Закрыть</span></button>
+          <div class="arrival-date-wrapper">
+            <label class="control-modal" for="arrival-date-field">Дата заезда:</label>
+            <input class="control-input-modal" type="text" name="arrival-date" id="arrival-date-field" value="27 апреля 2020">
+            <span class="description-date">Мы не можем отправить вас в прошлое.</span>
+          </div>
+          <div class="arrival-date-wrapper">
+            <label class="control-modal" for="departure-date-field">Дата выезда:</label>
+            <input class="control-input-modal" type="text" name="departure-date" id="departure-date-field" value="1 сентября 2023">
+            <span class="description-date">На эти даты есть свободные номера. Пока есть.</span>
+          </div>
+          <div class="amount-wrapper">
+            <label class="control-modal" for="adults-amount-field">Взрослые:</label>
+            <div class="amount-people-wrapper">
+              <button class="amount-people amount-people-minus">
+                <svg class="icon-amount-people" width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="Vector" d="M0 0L0 2L14 2V0L0 0Z"/>
+                </svg>
+              </button>
+              <input class="control-input-modal control-input-modal-amount" type="number" name="adults-amount" id="adults-amount-field" value="2">
+              <button class="amount-people amount-people-plus">
+                <svg class="icon-amount-people" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="Vector" d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                </svg>
+              </button>
+            </div>
+            <label class="control-modal" for="children-amount-field">Дети: <span class="info-children"></span></label>
+            <div class="amount-people-wrapper">
+              <button class="amount-people amount-people-minus">
+                <svg class="icon-amount-people" width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="Vector" d="M0 0L0 2L14 2V0L0 0Z"/>
+                </svg>
+              </button>
+              <input class="control-input-modal control-input-modal-amount" type="number" name="children-amount" id="children-amount-field" value="2">
+              <button class="amount-people amount-people-plus">
+                <svg class="icon-amount-people" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="Vector" d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <button class="button-modal-search">Найти</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>
