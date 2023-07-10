@@ -284,7 +284,7 @@ main {
     bottom: -30px;
     left: 50%;
     content: "";
-    transform: translateX(-30px);
+    transform: translateX(-50%);
 }
 
 .advantages-item-extended .advantages-item-title::before {
@@ -410,8 +410,7 @@ main {
 /* Форма подписки */
 .subscription {
     text-align: center;
-    min-height: 415px;
-    padding-top: 96px;
+    padding: 96px 258px 104px;
 }
 
 .index-subscription {
@@ -470,7 +469,7 @@ main {
     border-radius: 4px 0px 0px 4px;
 }
 
-.catalog-subscription .subscription-mail {
+.subscription-mail {
     background-color: #F2F2F2;
 }
 
@@ -713,6 +712,12 @@ main {
     border: none;
     padding: 12px 20px;
     padding-right: 50px;
+    background-color: #F2F2F2;
+}
+
+input:hover,
+input:focus {
+    background-color: #E6E6E6;
 }
 
 .amount {
@@ -1155,6 +1160,7 @@ main {
     width: 100%;
     height: 100%;
     display: flex;
+    display: none;
 }
 
 .modal-search {
@@ -1196,6 +1202,15 @@ main {
     position: relative;
 }
 
+.button-modal-close:hover,
+.button-modal-close:focus {
+    background-color: #E6E6E6;
+}
+
+.button-modal-close:active {
+    opacity: 0.3;
+}
+
 .arrival-date-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -1217,21 +1232,37 @@ main {
 }
 
 .control-input-modal {
-    width: 440px;
-    padding: 12px 20px;
-    border-radius: 4px;
     background-color: #F2F2F2;
     border: none;
     font-family: inherit;
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
+    color: #000;
+}
+
+.arrival-date-wrapper .control-input-modal {
+    width: 440px;
+    padding: 12px 20px;
+    padding-right: 50px;
+    border-radius: 4px;
+    position: relative;
+    background-image: url("../images/calendar.svg");
+    background-repeat: no-repeat;
+    background-position: top 50% right 20px;
+    align-self: stretch;
 }
 
 .description-date {
     padding-left: 157px;
     padding-top: 4px;
     margin-bottom: 23px;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.description-date-waring {
+    color: #FF5757;
 }
 
 .control-input-modal-amount {
@@ -1267,8 +1298,15 @@ main {
     margin-right: 0;
 }
 
+.people-info {
+    display: flex;
+    flex-direction: column;
+}
+
 .amount-wrapper .control-modal {
     margin-right: 46px;
+    display: flex;
+    gap: 10px;
 }
 
 .amount-people {
@@ -1298,6 +1336,71 @@ main {
     fill-opacity: 0.3;
 }
 
+.amount-people:hover .icon-amount-people,
+.amount-people:focus .icon-amount-people {
+    fill: #000000;
+    fill-opacity: 1;
+}
+
+.amount-people:active .icon-amount-people {
+    fill-opacity: 0.2;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip-toggle {
+    display: block;
+    background-color: #83B3D3;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-image: url("../images/info-children.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}
+
+.tooltip-text {
+    width: 256px;
+    position: absolute;
+    background-color: #000;
+    z-index: 1;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 15px 20px 18px;
+    text-transform: none;
+    border-radius: 10px;
+    background: #333;
+    box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.30);
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.tooltip-text:after {
+    content:'';
+    position: absolute;
+    background-image: url("../images/triangle-tooltip.svg");
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 9px;
+    bottom: 100%;
+    left:0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
 .button-modal-search {
     grid-column: 1 / -1;
     display: block;
@@ -1311,4 +1414,19 @@ main {
     text-transform: uppercase;
     border-radius: 10px;
     background-color: #83B3D3;
+}
+
+.button-modal-search:hover,
+.button-modal-search:focus {
+    background-color: #68A2CA;
+}
+
+.button-modal-search:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #82B3D3;
+}
+
+.button-modal-search:disabled {
+    color: #FFF;
+    background-color: #E5E5E5;
 }
