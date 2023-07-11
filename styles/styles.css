@@ -1173,7 +1173,6 @@ input:focus {
     height: 100%;
     display: flex;
     display: none;
-    padding-top: 396px;
 }
 
 .modal-search {
@@ -1289,6 +1288,7 @@ input:focus {
     text-align: center;
     border-radius: 0;
 }
+
 .control-input-modal-amount::-webkit-outer-spin-button,
 .control-input-modal-amount::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -1396,22 +1396,22 @@ input:focus {
 }
 
 .tooltip-text:after {
-    content:'';
+    content: '';
     position: absolute;
     background-image: url("../images/triangle-tooltip.svg");
     background-repeat: no-repeat;
     width: 19px;
     height: 9px;
     bottom: 100%;
-    left:0;
-    right:0;
+    left: 0;
+    right: 0;
     margin-left: auto;
     margin-right: auto;
 }
 
 .tooltip-toggle:hover + .tooltip-text,
 .tooltip-toggle:focus + .tooltip-text {
-  display: block;
+    display: block;
 }
 
 .button-modal-search {
