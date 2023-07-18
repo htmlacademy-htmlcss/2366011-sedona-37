@@ -4,6 +4,8 @@
   <head>
     <meta charset="UTF-8">
     <title>Поиск гостиницы в Седоне</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
 
@@ -101,17 +103,15 @@
                 <legend class="search-filter-title">Стоимость, ₽:</legend>
                 <div class="range-wrapper-inputs">
                   <input class="control-input control-input-price" type="text" name="min-amount" value="0" id="min-amount-field">
-                   <span class="amount amount-from">от</span>
-                  <label class="visually-hidden" for="min-amount-field">Минимальная стоимость</label>
+                  <label class="amount amount-from" for="min-amount-field">от</label>
                   <input class="control-input control-input-price" type="text" name="max-amount" value="9000" id="max-amount-field">
-                  <span class="amount amount-until">до</span>
-                  <label class="visually-hidden" for="max-amount-field">Максимальная стоимость</label>
+                  <label class="amount amount-until" for="max-amount-field">до</label>
                 </div>
                 <div class="range">
                   <div class="range-scale">
                     <div class="range-bar">
-                      <button class="range-toggle range-toggle-min"><span class="visually-hidden">Изменить минимальную цену</span></button>
-                      <button class="range-toggle range-toggle-max"><span class="visually-hidden">Изменить максимальную цену</span></button>
+                      <button class="range-toggle range-toggle-min" type="button"><span class="visually-hidden">Изменить минимальную цену</span></button>
+                      <button class="range-toggle range-toggle-max" type="button"><span class="visually-hidden">Изменить максимальную цену</span></button>
                     </div>
                   </div>
                 </div>
@@ -273,7 +273,7 @@
           <p class="section-subtitle">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="mail-field">E-mail адрес</label>
-            <input class="subscription-mail" type="email" name="mail" id="mail-field" placeholder="Ваш e-mail">
+            <input class="subscription-mail" type="email" name="mail" id="mail-field" placeholder="Ваш e-mail" required>
             <button class="button-subscription" type="submit">Подписаться</button>
           </form>
         </section>
