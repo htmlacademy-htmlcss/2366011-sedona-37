@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
@@ -119,7 +121,7 @@
           </p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="mail-field">E-mail адрес</label>
-            <input class="subscription-mail" type="email" name="mail" id="mail-field" placeholder="Ваш e-mail">
+            <input class="subscription-mail" type="email" name="mail" id="mail-field" placeholder="Ваш e-mail" required>
             <button class="button-subscription" type="submit">Подписаться</button>
           </form>
         </section>
@@ -176,51 +178,53 @@
           <button class="button-modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
           <div class="arrival-date-wrapper">
             <label class="control-modal" for="arrival-date-field">Дата заезда:</label>
-            <input class="control-input-modal" type="text" name="arrival-date" id="arrival-date-field" value="27 апреля 2020" placeholder="Укажите дату">
+            <input class="control-input-modal" type="text" name="arrival-date" id="arrival-date-field" value="27 апреля 2020" placeholder="Укажите дату" required>
             <span class="description-date description-date-waring">Мы не можем отправить вас в прошлое.</span>
           </div>
           <div class="arrival-date-wrapper">
             <label class="control-modal" for="departure-date-field">Дата выезда:</label>
-            <input class="control-input-modal" type="text" name="departure-date" id="departure-date-field" value="1 сентября 2023" placeholder="Укажите дату">
+            <input class="control-input-modal" type="text" name="departure-date" id="departure-date-field" value="1 сентября 2023" placeholder="Укажите дату" required>
             <span class="description-date">На эти даты есть свободные номера. Пока есть.</span>
           </div>
           <div class="amount-wrapper">
-            <label class="control-modal" for="adults-amount-field"><span class="people-info">Взрослые:</span></label>
+            <label class="control-modal" for="adults-amount-field">Взрослые:</label>
             <div class="amount-people-wrapper">
               <button class="amount-people amount-people-minus" type="button">
+                <span class="visually-hidden">Убавить количество взрослых людей</span>
                 <svg class="icon-amount-people" width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path id="Vector" d="M0 0L0 2L14 2V0L0 0Z"/>
+                <path d="M0 0L0 2L14 2V0L0 0Z"/>
                 </svg>
               </button>
-              <input class="control-input-modal control-input-modal-amount" type="number" name="adults-amount" id="adults-amount-field" value="2">
+              <input class="control-input-modal control-input-modal-amount" type="number" name="adults-amount" id="adults-amount-field" value="2" required>
               <button class="amount-people amount-people-plus" type="button">
+                <span class="visually-hidden">Прибавить количество взрослых людей</span>
                 <svg class="icon-amount-people" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path id="Vector" d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
                 </svg>
               </button>
             </div>
-            <label class="control-modal" for="children-amount-field">
-              <span class="people-info">Дети:</span>
+            <label class="control-modal" for="children-amount-field">Дети:</label>
               <span class="tooltip">
                 <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date"></button>
                 <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
               </span>
-            </label>
             <div class="amount-people-wrapper">
               <button class="amount-people amount-people-minus" type="button">
+                <span class="visually-hidden">Убавить количество детей</span>
                 <svg class="icon-amount-people" width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path id="Vector" d="M0 0L0 2L14 2V0L0 0Z"/>
+                <path d="M0 0L0 2L14 2V0L0 0Z"/>
                 </svg>
               </button>
-              <input class="control-input-modal control-input-modal-amount" type="number" name="children-amount" id="children-amount-field" value="2">
+              <input class="control-input-modal control-input-modal-amount" type="number" name="children-amount" id="children-amount-field" value="2" required>
               <button class="amount-people amount-people-plus" type="button">
+                <span class="visually-hidden">Прибавить количество детей</span>
                 <svg class="icon-amount-people" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path id="Vector" d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
                 </svg>
               </button>
             </div>
           </div>
-          <button class="button-modal-search" type="button">Найти</button>
+          <button class="button-modal-search" type="submit">Найти</button>
         </form>
       </div>
     </div>
